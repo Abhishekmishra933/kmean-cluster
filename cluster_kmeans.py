@@ -4,7 +4,7 @@ import pandas as pd
 dataset = pd.read_csv('Mall_customers.csv')
 X =  dataset.iloc[:, 3:5].values
 #kmean cluster
-from sklearn.cluster import KMeans
+from sklearn.cluster import KMeans 
 wcss = []
 for i in range(1, 11):
     kmeans =KMeans(n_clusters = i, init ='k-means++', max_iter = 200, n_init =10, random_state = 0)
